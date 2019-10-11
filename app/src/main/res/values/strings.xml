@@ -2,7 +2,7 @@
     <string name="app_name">Misiloch</string>
 
     <!-- WELCOME -->
-    <string name="welcome_1_title">Welcome</string>
+    <string name="welcome_1_title">Welcome!</string>
     <string name="welcome_1_description">Browse the coolest pictures from around the world.</string>
 
     <string name="welcome_2_title">Favorite</string>
