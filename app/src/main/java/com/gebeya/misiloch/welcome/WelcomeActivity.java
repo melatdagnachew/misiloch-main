@@ -10,6 +10,8 @@ import com.gebeya.misiloch.framework.base.BaseActivity;
 
 public class WelcomeActivity extends BaseActivity  {
 
+    public static final int PAGE_COUNT = 3;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
