@@ -5,4 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".splash.SplashActivity">
 
+    <RelativeLayout
+        android:id="@+id/splashFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </RelativeLayout>
