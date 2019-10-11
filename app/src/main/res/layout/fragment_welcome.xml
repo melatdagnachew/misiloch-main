@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                tools:srcCompat="@drawable/welcome_camera_icon" />
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         </RelativeLayout>
 
