@@ -9,9 +9,11 @@
     <!--PURPLE COLORS-->
     <color name="purple">#AE01FF</color>
     <color name="purple_dark">#8800C7</color>
+    <color name="background_purple">#DAA2FF</color>
 
     <!--RED COLOR-->
     <color name="red">#FF0000</color>
+    <color name="background_red">#FFB2B2</color>
 
     <!--GREEN COLORS-->
     <color name="green">#017B0A</color>
@@ -20,6 +22,7 @@
     <!--RED COLORS-->
     <color name="yellow">#FF9B01</color>
     <color name="yellow_dark">#C77900</color>
+    <color name="background_yellow">#FFC67A</color>
 
     <!--==================== THEME COLORS ==================== -->
     <color name="colorPrimary">@color/yellow</color>
