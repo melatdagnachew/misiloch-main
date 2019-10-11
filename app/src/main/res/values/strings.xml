@@ -23,6 +23,4 @@
         <item>@string/welcome_3_description</item>
     </string-array>
 
-    <string name="welcome_skip_button">Skip</string>
-
 </resources>
