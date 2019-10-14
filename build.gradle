@@ -25,3 +25,9 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task showBuildTime {
+    Date date = new Date()
+    println("Build date: ${date}")
+    System.out.println("Build completed")
+}
