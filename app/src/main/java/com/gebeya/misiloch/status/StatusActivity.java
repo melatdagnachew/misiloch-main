@@ -37,4 +37,8 @@ public class StatusActivity extends BaseActivity {
         ButterKnife.bind(this);
 
     }
+
+    private void loadApiStatus() {
+
+    }
 }
