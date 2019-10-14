@@ -15,6 +15,18 @@ android {
     }
 
     buildTypes {
+        beta {
+            initWith(debug)
+            applicationIdSuffix ".beta"
+            versionNameSuffix "-BETA"
+        }
+
+        injera {
+            initWith(debug)
+            applicationIdSuffix ".injera"
+            versionNameSuffix "-INJERA"
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -28,17 +40,22 @@ android {
 }
 
 dependencies {
+
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.0.0'
 
     // Room
-    implementation 'androidx.room:room-runtime:2.2.0'
-    annotationProcessor 'androidx.room:room-compiler:2.2.0'
+    def roomVersion = "2.2.0"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$roomVersion"
 
     // Butter Knife
-    implementation 'com.jakewharton:butterknife:10.2.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    def butterKnifeVersion = "10.2.0"
+    implementation "com.jakewharton:butterknife:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+
     // Lottie
     implementation 'com.airbnb.android:lottie:3.0.7'
 
