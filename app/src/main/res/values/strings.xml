@@ -23,4 +23,14 @@
         <item>@string/welcome_3_description</item>
     </string-array>
 
+    <!-- HOME -->
+    <string name="home_status_menu_label">Status</string>
+
+    <!-- STATUS -->
+    <string name="status_title">Service Status</string>
+    <string name="status_running_label" formatted="false">Running: %s</string>
+    <string name="status_version_label" formatted="false">Version: %s</string>
+    <string name="status_author_label" formatted="false">Author: %s</string>
+
+
 </resources>
