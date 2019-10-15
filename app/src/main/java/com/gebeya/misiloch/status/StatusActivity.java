@@ -6,12 +6,22 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import com.gebeya.misiloch.App;
 import com.gebeya.misiloch.R;
 import com.gebeya.misiloch.framework.base.BaseActivity;
+import com.gebeya.misiloch.framework.util.Const;
 import com.pnikosis.materialishprogress.ProgressWheel;
+
+import java.io.IOException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class StatusActivity extends BaseActivity {
 
@@ -35,10 +45,28 @@ public class StatusActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status);
         ButterKnife.bind(this);
-
+        loadApiStatus();
     }
 
     private void loadApiStatus() {
+        Retrofit retrofit = ((App)getApplication()).getRetrofit();
+        ApiStatusService service = retrofit.create(ApiStatusService.class);
+        service.getStatus().enqueue(new Callback<ApiStatus>() {
+            @Override
+            public void onResponse(Call<ApiStatus> call, Response<ApiStatus> response) {
+
+                ApiStatus status = response.body();
+                d(status.author);
+                d(status.version);
+                d(status.status);
+            }
+
+            @Override
+            public void onFailure(Call<ApiStatus> call, Throwable t) {
+
+            }
+        });
 
     }
+
 }
